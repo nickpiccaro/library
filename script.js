@@ -81,7 +81,8 @@ function createCard(arrayLib){
 
         var checkBox = document.createElement("input");
         checkBox.type="checkbox";
-        checkBox.id ="switch";
+        checkBox.className="switch";
+        checkBox.id ="switch" + i;
         if(arrayLib[i].read){
             checkBox.checked = true;
         }else{
@@ -116,6 +117,22 @@ function createCard(arrayLib){
     for (let remBtn of remBtns){
         remBtn.addEventListener("click", remBtnPress);
     }
+
+    //checkbox change
+    const changeSwitches = document.getElementsByClassName("switch");
+
+    const changePress = e => {
+        let btnID = e.target.id;  // Get ID of Clicked Element
+        let arr = btnID.match(/[0-9]+$/);
+        let num = parseInt(arr[0], 10);
+        myLibrary[num].read = e.target.checked;
+        createCard(myLibrary);
+    }
+
+    for (let changeSwitch of changeSwitches){
+        changeSwitch.addEventListener("change", changePress);
+    }
+
 }
 
 
