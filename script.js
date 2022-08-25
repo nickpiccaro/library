@@ -163,8 +163,8 @@ function formBookAdd() {
 
 
 //run part
-const theHobbit = new Book('The Hobbit','J.R.R. Tolkien',416, false);
-const theLightningThief = new Book('Percy Jackson and the Lightning Thief', 'Rick Riordan', 200, true)
+const theHobbit = new Book('The Hobbit','J.R.R. Tolkien',304, false);
+const theLightningThief = new Book('Percy Jackson and the Lightning Thief', 'Rick Riordan', 416, true)
 addBookToLibrary(theHobbit);
 addBookToLibrary(theLightningThief);
 createCard(myLibrary);
