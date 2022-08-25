@@ -1,0 +1,264 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+html{
+    position: relative;
+    min-height: 100%;
+}
+/* HEADING */
+header{
+    background-color: white;
+    font-weight: bolder;
+    font-size: 50px;
+}
+
+/* MIDDLE */
+body{
+    background-color: #e7e7e7;
+    margin-bottom: 100px;
+}
+.middle{
+    background-color: #e7e7e7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin-top: 5px;
+}
+  
+.addBookBtn {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    background-color: #1c87c9;
+    color: white;
+    padding: 14px 20px;
+    cursor: pointer;
+    position: relative;
+    font-size: 24px;
+    text-align: center;
+    width: 300px;
+}
+  
+.bookAddPopup {
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+  
+.formPopup {
+    display: none;
+    position: fixed;
+    left: 45%;
+    top: 5%;
+    transform: translate(-50%, 5%);
+    border: 3px solid #999999;
+    z-index: 9;
+}
+  
+.formContainer {
+    max-width: 300px;
+    padding: 20px;
+    background-color: #fff;
+}
+  
+.formContainer input[type=text],
+.formContainer input[type=password]
+.formContainer input[type=checkbox] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 20px 0;
+    border: none;
+    background: #eee;
+}
+  
+.formContainer input[type=text]:focus,
+.formContainer input[type=password]:focus
+.formContainer input[type=checkbox]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+  
+.formContainer .btn {
+    padding: 12px 20px;
+    border: none;
+    background-color: #8ebf42;
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+  
+.formContainer .cancel {
+    background-color: #cc0000;
+}
+  
+.formContainer .btn:hover,
+.openButton:hover {
+    opacity: 1;
+}
+
+/* CONTAINER */
+.container{
+    background-color: #e7e7e7;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 400px;
+    height: 300px;
+    margin: 1%;
+    background: white;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    transition: .3s all;
+    box-shadow: 0 2px 5px 0 rgba(3,6,26,0.15);
+}
+
+.footCon{
+    margin-top: auto;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.removeCon{
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.remBtn {
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(255, 95, 95);
+    color: white;
+    padding: 7px 10px;
+    cursor: pointer;
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+    width: 150px;
+}
+
+.readText{
+    margin-top:auto;
+}
+
+.bookTitle{
+    font-size: 28px;
+}
+.bookAuthor{
+    font-size: 22px;
+}
+
+
+/* FOOTER */
+
+
+footer{
+    background-color: white;
+}
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: var(--spacing-sm);
+}
+  
+.fa-github {
+    font-size: 24px;
+    color: var(--black);
+    transition: transform 0.3s ease-in-out;
+}
+  
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
+
+
+/* The switch - the box around the slider */
+.switchCon {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+  
+/* Hide default HTML checkbox */
+.switchCon input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+    position: absolute;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
