@@ -1,3 +1,3 @@
 # library
 
-https://nicholaspiccaro.github.io/library/
+https://nickpiccaro.github.io/library/
